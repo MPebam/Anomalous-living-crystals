@@ -3,7 +3,7 @@
 This repository is currently a work in progress where I will gradually upload the files used to simulate active Brownian particles in a heterogenous environment. For now, I include a brief description of the files and the contents:
 
 #### Simulator.cpp
-This file contains the main Simulator class. This handles simulation of the particles and generally can be run in time or event driven fashion.
+This file contains the main Simulator class. This handles simulation of the particles and generally can be run in time or event driven fashion. A first change to this file will be to split the declarations into a header file to improve readability. 
 
 #### bindings.py
 This file sets up the possibility of communication from of the Simulator.cpp with a python script, using a simple import statement. The main aim of this approach is to enable streamlined reinforcement learning framework to run in Python with the more efficient c++ code (Simulator) doing the simulation heavy lifting. The communication is set up using Pybind (documentation and the relevant commmand arguments to enable compilation can be found here: https://pybind11.readthedocs.io/en/stable/index.html). 
